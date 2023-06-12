@@ -2,12 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
    
 }
 
+
+
 body{
     background: #FFF6DA;
-    overflow-x: auto;
+    width: 100vw;
+    /* overflow-x: auto; */
 
 }
 
@@ -48,13 +52,13 @@ header ul{
   /* -----hamburger------------ */
 
   .hamburger{
-   position: absolute;
+ 
    left: 50rem;
    top: 2rem;
    width: 5rem;
    height: 3rem;
    display: none;
-   z-index: 1000;
+   z-index: 2000;
    cursor: pointer;
    position: fixed;
 
@@ -63,20 +67,21 @@ header ul{
   .hidden{
     display: none;
   }
+
+
   
   #expend{
-      height: 400px;
+      height: 100%;
       width: 100%;
       position: fixed;
       top: 0;
       left: 0;
-      background-color: white;
-      z-index: 9999;
+      background-color: 
+      #FFF6DA;
+      z-index: 999;
       opacity: 0;
       visibility: hidden;
       transition: top 10s;
-      /* transition: .6s; */
-   
   }
   
   
@@ -97,10 +102,15 @@ header ul{
 
 
   #expend ul li{
-     font-size: 2rem;
-    line-height: 3rem;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 5rem;
+    text-align: center;
     cursor: pointer;
-    color: #FC6B3F;}
+    color: 
+    #000000;}
 
 
   #expend ul li:hover{
@@ -108,7 +118,13 @@ header ul{
   }
 
 
+  .open{
+    content: url(images/MenuButton.svg);
+  }
 
+  .cross{
+    content: url(images/crossx.svg);
+  }
 
 
   
@@ -123,7 +139,7 @@ header ul{
     align-items: center;
     margin-left: 8rem;
     margin-right: 6rem;
-    width:100%;
+    width:100vw;
 }
 
 .container .left p{
@@ -195,6 +211,7 @@ header ul{
     justify-content: center;
     align-items: center;
     height: 70rem;
+    width: 100vw;
 }
 
 .container2 .c2para1, .c2para2{
@@ -450,12 +467,9 @@ color: #000000;
 
 /* ---------------------footer-------------------- */
 .footercontainer{
-    /* width: 100%; */
-    /* min-width: 100%; */
     width:100%;
     height: 14rem;
-    background-color: 
-    #262525;
+    background-color:  #262525;
     padding: 3rem;
 }
 
@@ -561,8 +575,5 @@ margin-left: auto;
     #expend ul{
         opacity: 1 !important; 
        }
-
-
-
 
   }
