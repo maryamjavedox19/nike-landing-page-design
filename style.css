@@ -1,18 +1,13 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    
-   
+    box-sizing: border-box;  
 }
-
 
 
 body{
     background: #FFF6DA;
     width: 100vw;
-    /* overflow-x: auto; */
-
 }
 
 .header{
@@ -24,18 +19,17 @@ body{
     justify-content: space-between;
     padding: 10px 50px;
 }
+
 header ul{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 5rem;
-  
   }
   
   header ul li{
     list-style: none;
-    margin-left:20px;
-    
+    margin-left:20px; 
   }
   
   header ul li a{
@@ -49,25 +43,37 @@ header ul{
     color: #000000;
   }
 
-  /* -----hamburger------------ */
+  /* -----------hamburger------------ */
+
 
   .hamburger{
- 
-   left: 50rem;
-   top: 2rem;
-   width: 5rem;
-   height: 3rem;
-   display: none;
-   z-index: 2000;
-   cursor: pointer;
-   position: fixed;
+    position: absolute;
+    left: 40rem;
+    top: 1rem;
+    width: 5rem;
+    height: 3rem;
+    display: none;
+    z-index: 1000;
+    cursor: pointer;
+    position: fixed;
+  }
 
+
+  .close-button {
+    position: absolute;
+    left: 40rem;
+    top: 2rem;
+    width: 3rem;
+    height: 3rem;
+    display: none;
+    z-index: 1000;
+    cursor: pointer;
+    position: fixed;
   }
 
   .hidden{
     display: none;
   }
-
 
   
   #expend{
@@ -115,15 +121,6 @@ header ul{
 
   #expend ul li:hover{
     background-color: #FFFFFF;
-  }
-
-
-  .open{
-    content: url(images/MenuButton.svg);
-  }
-
-  .cross{
-    content: url(images/crossx.svg);
   }
 
 
@@ -200,12 +197,11 @@ header ul{
 }
 
 
-/* second container    */
+/*--------------- second container -----------------------   */
 
 .container2{
-    /* background: linear-gradient( #FFF6DA 0%, white 100%); */
     background: linear-gradient(to bottom,  #FFF6DA, white);
-    margin-top: 3rem;
+    margin-top: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -282,7 +278,7 @@ header ul{
 }
 
 
-/* ----------third page------------- */
+/* ------------------third page------------- */
 
 .container3{
     margin-top: 7rem;
@@ -290,28 +286,28 @@ header ul{
 }
 
 .c3logo{
-width: 87px;
-height: 54px;
-margin-bottom: 1rem;
+    width: 87px;
+    height: 54px;
+    margin-bottom: 1rem;
 
 }
 
 .c3top{
-width: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .c3para{
-font-family: 'DM Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 31px;
-text-align: center;
-color: #000000;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    color: #000000;
 
 }
 
@@ -488,6 +484,10 @@ color: #000000;
     font-weight: 700;
 }
 
+
+
+/*----------------------- media queries-------------- */
+
 @media screen and (max-width: 1216px){
 .container p{
     width: 24rem;
@@ -497,17 +497,6 @@ color: #000000;
 .right img{
     margin-left:7.5rem;
 }
-}
-
-
-@media screen and (max-width: 1171px){
-/* .btndiv{
- width: 100vw; 
-
-margin-left: auto;
-
-
-} */
 }
 
 
@@ -535,7 +524,6 @@ margin-left: auto;
     height: 30rem;
     margin-left: 4rem;
   }
-
 }
     
 
@@ -545,7 +533,6 @@ margin-left: auto;
       height: 25rem;
       margin-left: 4rem;
     }
-  
   }
 
 
@@ -559,7 +546,6 @@ margin-left: auto;
 .right img{
     display: block;
 }
-
   }
 
 
@@ -569,11 +555,28 @@ margin-left: auto;
     }
 
     .hamburger{
+        visibility: visible;
+        opacity: 1;
         display: block;
     }
 
     #expend ul{
         opacity: 1 !important; 
        }
+  }
+
+
+  @media screen and (max-width: 287px){
+.container{
+   margin-left: 100%;
+}
+
+.btn{
+   left: 100%
+}
+
+.divider{
+    width: 300vw;
+}
 
   }

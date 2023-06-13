@@ -1,55 +1,38 @@
 let ham = document.getElementById('hamburger');
-  let expend=document.getElementById('expend');
-  let expendul=document.getElementById('expul');
+let closeButton = document.getElementById("close-button");
+let expend=document.getElementById('expend');
+let expendul=document.getElementById('expul');
  
 
 
-
-
-
-
-  document.addEventListener('DOMContentLoaded', function() {
-    var ham = document.getElementById('hamburger');
-  
-    function toggleopacity(){
-        if(expend.style.opacity===1){
-            expend.style.opacity=0;
-        }
-  
-        else{
-            expend.style.opacity=1;
-        }
-  
+function toggleOpacity() {
+    if (expend.style.opacity === 1) {
+      expend.style.opacity = 0;
+      ham.style.display = "block";
+    } else {
+      expend.style.opacity = 1;
     }
-  
-  function toggleicon(){
-  if(ham.classList.contains('open')){
-      ham.classList.remove('open');
-      ham.classList.add('cross');
   }
   
-  else{
-      ham.classList.remove('cross');
-      ham.classList.add('open');
-  }
-  }
-  
-  
-    function togglevisibility(){
-        if(expend.style.visibility==='hidden'){
-            expend.style.visibility='visible';
-        }
-  
-        else{
-            expend.style.visibility='hidden';
-        }
+  function toggleVisibility() {
+    if (expend.style.visibility === "hidden") {
+      expend.style.visibility = "visible";
+      ham.style.display = "none";
+      closeButton.style.display = "block";
+    } else {
+      expend.style.visibility = "hidden";
+      closeButton.style.display = "none";
+      ham.style.display = "block";
+      
     }
+  }
   
-    ham.addEventListener('click', ()=>{
-   
-        togglevisibility();
-        toggleopacity();
-        toggleicon();
-   })
-   
+  ham.addEventListener("click", () => {
+    toggleOpacity();
+    toggleVisibility();
+  });
+  
+  closeButton.addEventListener("click", () => {
+    toggleOpacity();
+    toggleVisibility();
   });
